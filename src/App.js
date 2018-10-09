@@ -9,7 +9,7 @@ class App extends Component {
     this.state = {
       artist:[]
     }
-    this.url = 'http://ws.audioscrobbler.com/2.0/?';
+    this.url = 'https://ws.audioscrobbler.com/2.0/?';
     this.apiKey = '249a58095b144df61f95be44d013c3d6';
     this.codeNct = `${this.url}method=artist.gettoptracks&artist=NCT&api_key=${this.apiKey}&limit=10&format=json`
     this.codeNsync = `${this.url}method=artist.gettoptracks&artist=NSYNC&api_key=${this.apiKey}&limit=10&format=json`
