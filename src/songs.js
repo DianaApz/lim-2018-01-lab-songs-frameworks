@@ -1,14 +1,34 @@
 import React, { Component } from 'react';
 
 class Song extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         // console.log(props);
-        this.song=props.song
+        this.song = props.song
+        this.state = {
+            count: 0
+        }
+        this.like = this.like.bind(this);
+        this.dislike = this.dislike.bind(this);
     }
-    render() { 
+    like() {
+        this.setState({
+            count: this.state.count + 1
+        });
+    }
+
+    dislike() {
+        if (this.state.count > 0) {
+            this.setState({
+                count: this.state.count - 1
+            })
+        };
+    }
+
+    render() {
         return (
-            <p>{this.song}</p>
+            <p>{this.song}<button className="btn" onClick={this.like}>like</button>
+                <span>{this.state.count}</span><button className="btn" onClick={this.dislike}>dislike</button></p>
         )
     }
 }

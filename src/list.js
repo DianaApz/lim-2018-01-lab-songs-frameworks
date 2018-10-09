@@ -7,9 +7,7 @@ class ListMusic extends Component {
         this.name = props.name;
         this.image = props.image;
         this.listSongs = props.listSongs;
-        // console.log(props);
-
-
+        console.log(props);
     }
     render() {
 
