@@ -6,28 +6,28 @@ class Song extends Component {
         // console.log(props);
         this.song = props.song
         this.state = {
-            count: 0
+            number: 0
         }
         this.like = this.like.bind(this);
         this.dislike = this.dislike.bind(this);
     }
     like() {
         this.setState({
-            count: this.state.count + 1
+            number: this.state.number + 1
         });
     }
 
     dislike() {
-        if (this.state.count > 0) {
+        if (this.state.number > 0) {
             this.setState({
-                count: this.state.count - 1
+                number: this.state.number - 1
             })
         };
     }
 
     render() {
         return (
-            <p>{this.song}<span>{this.state.count}</span><button className="btn" onClick={this.like}>like</button>
+            <p>{this.song}<span>{this.state.number}</span><button className="btn" onClick={this.like}>like</button>
                 <button className="btn" onClick={this.dislike}>dislike</button></p>
         )
     }
