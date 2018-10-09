@@ -27,8 +27,8 @@ class Song extends Component {
 
     render() {
         return (
-            <p>{this.song}<button className="btn" onClick={this.like}>like</button>
-                <span>{this.state.count}</span><button className="btn" onClick={this.dislike}>dislike</button></p>
+            <p>{this.song}<span>{this.state.count}</span><button className="btn" onClick={this.like}>like</button>
+                <button className="btn" onClick={this.dislike}>dislike</button></p>
         )
     }
 }
